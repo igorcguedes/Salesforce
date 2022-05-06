@@ -1,18 +1,26 @@
-# Salesforce DX Project: Next Steps
+# Projeto Base Topi Run 2021
+----
+Após ter clonado esse repositório, vc pode mescla-lo com o seu projeto.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Ele já te fornece uma estrutura básica, com alguns pontos que vimos em aula.
 
-## How Do You Plan to Deploy Your Changes?
+Para enviar as classes do projeto para sua Org Salesforce vc pode executar o comando abaixo no command do DOS
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+# Instalação
+--------
 
-## Configure Your Salesforce DX Project
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+``` bash
 
-## Read All About It
+sfdx force:auth:web:login -a my-sandbox --instanceurl https://login.salesforce.com
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+sfdx force:source:deploy -p ./force-app/main/default -u my-sandbox --wait=90
+
+```
+**PS:** `my-sandbox` é o apelido que vc quer dar para sua Org Salesforce
+
+
+Após isso basta abrir o vscode na pasta topi-run-base-project e ele já reconhecerá que é um projeto Salesforce.
+
+Após isso base executar o CTRL + SHIFT + P > "SFDX: Authorize an Org"
+
